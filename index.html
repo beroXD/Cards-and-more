@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <!-- CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <h1 class="text-center pt-3">Page under construction...</h1>
+        <div class="my-5">
+            <div class="progress">
+                <!-- .progress as a wrapper to indicate the max value of the progress bar. -->
+                <!-- the inner .progress-bar to indicate the progress so far.
+                The aria-valuemax attribute is used to define the maximum value allowed for a range widget such as a slider, spinbutton or progressbar. If the aria-valuenow has a known maximum and minimum, the author SHOULD provide properties for aria-valuemax and aria-valuemin. The value of aria-valuemax MUST be greater than or equal to the value of aria-valuemin. -->
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20%</div>
+            </div>
+        </div>
+
+        <!-- card group -->
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="pt3">Card Group</h1>
+                <div class="card-group my-3">
+                    <div class="card">
+                        <img class="card-img-top" src="assets/pix.gif" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="assets/pix2.gif" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="assets/pix3.gif" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- media objects -->
+            <div class="col-md-4">
+                <h4 class="pt3">Media Objects</h4>
+                <div class="d-flex my-4">
+                    <div class="flex-shrink-0">
+                        <!-- The flex-shrink property specifies how much the item will shrink compared to others item inside that container. -->
+                        <img class="icon" src="assets/icon.gif" alt="...">
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <!-- The flex-grow property specifies how much the item will grow compared to others item inside that container. -->
+                        This is some content from a media component. You can replace this with any content and adjust it as needed.
+                    </div>
+                </div>
+                <div class="d-flex my-3 align-items-center">
+                    <div class="flex-shrink-0">
+                        <img class="icon" src="assets/icon.gif" alt="...">
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        This is some content from a media component. You can replace this with any content and adjust it as needed.
+                    </div>
+                </div>
+                <div class="d-flex my-3 align-items-end">
+                    <div class="flex-shrink-0">
+                        <img class="icon" src="assets/icon.gif" alt="...">
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        This is some content from a media component. You can replace this with any content and adjust it as needed.
+                    </div>
+                </div>
+
+
+                <!-- badges -->
+                <button type="button" class="mt-4 btn btn-primary position-relative size">
+                    Refresh
+                    <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                        <span class="visually-hidden">New alerts</span>
+                    </span>
+                </button>
+                <button type="button" class="mt-4 btn btn-info size">
+                    Notifications <span class="badge bg-warning">7</span>
+                </button>
+            </div>
+        </div> <!-- end row -->
+        <!-- end card group -->
+
+        <!-- grid cards -->
+        <h1 class="pt-3">Grid Cards</h1>
+        <div class="row row-cols-1 row-cols-md-2 g-3 my-3">
+            <!-- .g-* classes can be used to control the horizontal gutter widths -->
+            <div class="col">
+                <div class="card">
+                    <img src="assets/ani.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="assets/ani2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="assets/ani3.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="assets/ani4.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end grid cards -->
+
+    </div> <!-- end container -->
+
+</body></html>
