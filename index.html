@@ -5,17 +5,37 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
-    <!-- JS -->
-    <script src="js/bootstrap.js"></script> <!-- must come first -->
-    <script src="js/bootstrap.bundle.js"></script>
+
     <!-- CSS -->
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
     <div class="container-fluid">
 
+        <!-- scrollspy -->
+        <nav id="navbar-example2" class="navbar navbar-light bg-light px-3 sticky-top">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="#scrollspyHeading1">Card / Media Objects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#scrollspyHeading2">Grid Cards</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#scrollspyHeading3">Jumbotron</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#scrollspyHeading4">Alerts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#scrollspyHeading5">Accordion / Flush</a>
+                </li>
+            </ul>
+        </nav><!-- end scrollspy -->
+        
         <h1 class="text-center pt-3">Page under construction...</h1>
         <div class="my-5">
             <div class="progress">
@@ -28,11 +48,14 @@
         </div>
 
         <!-- Toast -->
-        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast toast-sty m-3" role="alert" aria-live="assertive" aria-atomic="true">
+            <!-- data-autohide="false" to disable auto hide-->
             <div class="toast-header">
-                <img src="..." class="rounded me-2" alt="...">
-                <strong class="me-auto">Bootstrap</strong>
-                <small>11 mins ago</small>
+                <svg class="rounded mx-1" width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+                    <rect fill="#007aff" width="100%" height="100%" />
+                </svg>
+                <strong class="me-auto">Fially it worked!</strong>
+                <small class="text-muted">11 mins ago</small>
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
@@ -88,7 +111,7 @@
         </div>
 
         <!-- card group -->
-        <div class="row">
+        <div id="scrollspyHeading1" class="row">
             <div class="col-md-8">
                 <h1 class="pt3">Card Group</h1>
                 <div class="card-group my-3">
@@ -172,7 +195,7 @@
         <!-- end card group -->
 
         <!-- grid cards -->
-        <h1 class="pt-3">Grid Cards</h1>
+        <h1 id="scrollspyHeading2" class="pt-3">Grid Cards</h1>
         <div class="row row-cols-1 row-cols-md-2 g-3 my-3">
             <!-- .g-* classes can be used to control the horizontal gutter widths -->
             <div class="col">
@@ -230,7 +253,7 @@
         </div> 
         -->
 
-        <h5>Jumbotron In Bootstrap v5.x</h5>
+        <h5 id="scrollspyHeading3">Jumbotron In Bootstrap v5.x</h5>
         <div class="bg-light p-5 rounded-3 mb-3">
             <h1 class="display-4">Hello, world!</h1>
             <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
@@ -298,7 +321,7 @@
         </div> <!-- end jumbotron -->
 
         <!-- form with alerts -->
-        <h1 class="my-3">Alerts</h1>
+        <h1 id="scrollspyHeading4" class="my-3">Alerts</h1>
         <div class="row">
             <div class="col-md-8">
                 <h3 class="display-4 text-uppercase">Sign IN</h3>
@@ -320,20 +343,17 @@
                             <input type="password" placeholder="Password" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" class="form-control shadow-sm px-4">
                         </div>
                     </div>
-                    <div id="liveAlertPlaceholder">
-                        <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 shadow-sm" id="liveAlertBtn">Sign in</button>
-                    </div>
-
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <div>
+                        <div id="liveAlertPlaceholder">
+                            <button type="button" class="btn btn-primary btn-block text-uppercase mb-2 shadow-sm" id="liveAlertBtn">Sign in</button>
+                        </div>
                     </div>
                 </form>
             </div>
         </div> <!-- end of alerts -->
 
         <!-- Accordion -->
-        <div class="row">
+        <div id="scrollspyHeading5" class="row">
             <div class="col-md-6">
                 <h1 class="mt-3">Accordion</h1>
                 <div class="accordion my-3" id="accordionExample">
@@ -412,43 +432,48 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> <!-- end accordion -->
 
     </div> <!-- end container -->
 
-
     <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <!-- popovers must be initialized.
-    One way to initialize all popovers on a page would be to select them by their data-bs-toggle attribute. -->
     <script>
+        // popovers must be initialized.
+        // One way to initialize all popovers on a page would be to select them by their data-bs-toggle attribute.
         var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
         var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
             return new bootstrap.Popover(popoverTriggerEl)
-        });
+        })
+
 
         //dismissible trigger
         var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
             trigger: 'focus'
-        });
+        })
+    </script>
 
+    <script>
         //button alert
         var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
         var alertTrigger = document.getElementById('liveAlertBtn')
 
         function alert(message, type) {
             var wrapper = document.createElement('div')
-            wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+            wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="fade"></button></div>'
 
             alertPlaceholder.append(wrapper)
-        };
+        }
 
         if (alertTrigger) {
             alertTrigger.addEventListener('click', function() {
                 alert('Nice, you triggered this alert message!', 'success')
             })
-        };
+        }
+    </script>
 
+    <script>
         //Toast on page load
         window.onload = (event) => {
             let myAlert = document.querySelectorAll('.toast')[0];
