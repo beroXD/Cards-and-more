@@ -10,3 +10,12 @@
 .size {
     width: 100%
 }
+
+.carousel {
+  width:900px;
+  height:560px;
+}
+
+.font {
+    font-size: 7em;
+}
