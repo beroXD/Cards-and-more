@@ -442,7 +442,25 @@
     <script>
         // popovers must be initialized.
         // One way to initialize all popovers on a page would be to select them by their data-bs-toggle attribute.
+        
+        /*
+        /
+         - declare a variable popoverTriggerList and popoverList.
+         - [] Array object.
+         - The slice() method returns the selected elements in an array, as a new array object.
+         - The call() method calls a function with a given this value and arguments provided individually.
+         - The querySelectorAll() method returns all elements in the document that matches a specified selector(s).
+         /
+        */
+        
+        /*
+        /
+        [].slice returns a function object. A function object has a function call() which calls the function assigning the first parameter of the call() to this; in other words, making the function think that it's being called from the parameter (the NodeList returned by document.querySelectorAll('a')) rather than from an array.
+        /
+        */
         var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        
+        //The map() method calls the provided function once for each element in an array, in order.
         var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
             return new bootstrap.Popover(popoverTriggerEl)
         })
@@ -450,7 +468,8 @@
 
         //dismissible trigger
         var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
-            trigger: 'focus'
+            trigger: 'focus' 
+            //Use the focus trigger to dismiss popovers on the user’s next click of a different element than the toggle element.
         })
     </script>
 
